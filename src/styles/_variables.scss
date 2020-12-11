@@ -1,1 +1,38 @@
+//colors
 
+//sizes
+
+$base-size: 1rem * 1.25;
+
+//fonts
+
+%light-font {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+%light-font-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+%regular-font {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+%medium-font {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+%bold-font {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+%title-font {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
