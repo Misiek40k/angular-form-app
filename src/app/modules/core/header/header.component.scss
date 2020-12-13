@@ -1,0 +1,30 @@
+@import "src/styles/variables";
+
+.header {
+    padding: $base-size * 0.5 0;
+    background: $primary-color;
+    display: flex;
+    align-items: center;
+    margin-bottom: $base-size * 2;
+}
+
+.navbar {
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+
+        .icon {
+            margin-right: $base-size * 0.5;
+        }
+
+        .brand-title {
+            @extend %title-font;
+        }
+    }
+
+    .nav-link {
+        @extend %regular-font;
+    }
+}
+
+

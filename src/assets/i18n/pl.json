@@ -1,0 +1,11 @@
+{
+    "HEADER": {
+        "title": "Form App",
+        "formBtn": "Formularz",
+        "submitBtn": "Wyślij"
+    },
+    "HOMEPAGE": {
+        "cardHeaderText": "Cześć!",
+        "cardBodyText": "Witaj w aplikacji Angular SPA!"
+    }
+}
