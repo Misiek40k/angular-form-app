@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
+import { FormService } from '../../../services/form.service';
 
 @Component({
     selector: 'app-form',
@@ -23,7 +24,8 @@ export class FormComponent implements OnInit {
     ]);
 
     constructor(
-        private translate: TranslateService
+        private translate: TranslateService,
+        private formService: FormService
     ) { }
 
     ngOnInit(): void { }
