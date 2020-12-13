@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
 
     constructor(
         @Inject(DOCUMENT) private document: Document,
-        public translate: TranslateService
+        private translate: TranslateService
     ) {}
 
     ngOnInit(): void {
