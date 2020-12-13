@@ -8,9 +8,9 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core';
 })
 export class HeaderComponent implements OnInit {
 
-    isNavbarCollapsed = true;
+    brandIcon: IconProp = 'clipboard-list';
 
-    brandIcon: IconProp = 'clipboard-list'
+    isNavbarCollapsed = true;
 
     constructor() { }
 
