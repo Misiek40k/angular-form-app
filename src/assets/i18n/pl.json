@@ -9,6 +9,20 @@
         "cardBodyText": "Witaj w aplikacji Angular SPA!"
     },
     "FORM": {
-        "title": "Dane Użytkownika"
+        "title": "Dane Użytkownika",
+        "nameControlLabel": "Imię:",
+        "nameControlPlaceholder": "Wprowadź imię...",
+        "surnameControlLabel": "Nazwisko:",
+        "surnameControlPlaceholder": "Wprowadź nazwisko...",
+        "ageControlLabel": "Wiek:",
+        "ageControlPlaceholder": "Wprowadź wiek...",
+        "emptyNameControlError": "Pole Imię nie może być puste",
+        "digitsNameControlError": "Pole Imię może zawierać wyłącznie litery",
+        "emptySurnameControlError": "Pole Nazwisko nie może być puste",
+        "digitsSurnameControlError": "Pole Nazwisko może zawierać wyłącznie litery",
+        "emptyAgeControlError": "Pole Wiek nie może być puste",
+        "lettersAgeControlError": "Pole Wiek może zawierać wyłącznie cyfry",
+        "helloText": "Cześć",
+        "saveButton": "Zapisz"
     }
 }

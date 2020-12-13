@@ -7,5 +7,22 @@
     "HOMEPAGE": {
         "cardHeaderText": "Hello!",
         "cardBodyText": "Welcome to Angular SPA!"
+    },
+    "FORM": {
+        "title": "User Data",
+        "nameControlLabel": "Name:",
+        "nameControlPlaceholder": "Enter name...",
+        "surnameControlLabel": "Surname:",
+        "surnameControlPlaceholder": "Enter surname...",
+        "ageControlLabel": "Age:",
+        "ageControlPlaceholder": "Enter age...",
+        "emptyNameControlError": "Field Name can't be empty",
+        "digitsNameControlError": "Field Name may contain only letters",
+        "emptySurnameControlError": "Field Surname can't be empty",
+        "digitsSurnameControlError": "Field Name may contain only letters",
+        "emptyAgeControlError": "Field Age can't be empty",
+        "lettersAgeControlError": "Field Age may contain only digits",
+        "helloText": "Hello",
+        "saveButton": "Save"
     }
 }

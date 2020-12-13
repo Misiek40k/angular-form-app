@@ -1,0 +1,18 @@
+@import "src/styles/variables";
+
+.form-row {
+    .form-col {
+        height: $base-size * 1.9;
+    }
+
+    .card-title {
+        @extend %medium-font;
+        font-size: $base-size;
+        margin: 0
+    }
+}
+
+.hello-text {
+    @extend %medium-font;
+    font-size: $base-size * 0.8;
+}

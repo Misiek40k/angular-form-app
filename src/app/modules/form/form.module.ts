@@ -35,9 +35,9 @@ const routes: Routes = [
         ],
     imports: [
         SharedModule,
+        RouterModule.forChild(routes),
         FormsModule,
-        ReactiveFormsModule,
-        RouterModule.forChild(routes)
+        ReactiveFormsModule
     ]
 })
 export class FormModule {}
