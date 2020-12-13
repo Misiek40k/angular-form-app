@@ -2,7 +2,7 @@
     "HEADER": {
         "title": "Form App",
         "formBtn": "Form",
-        "sumbmitBtn": "Submit"
+        "summaryBtn": "Summary"
     },
     "HOMEPAGE": {
         "cardHeaderText": "Hello!",
