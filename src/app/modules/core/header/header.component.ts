@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-header',
@@ -12,7 +13,9 @@ export class HeaderComponent implements OnInit {
 
     isNavbarCollapsed = true;
 
-    constructor() { }
+    constructor(
+        protected translate: TranslateModule
+    ) { }
 
     ngOnInit(): void { }
 }
