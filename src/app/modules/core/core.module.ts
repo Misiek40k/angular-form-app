@@ -31,7 +31,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         })
     ],
     exports: [
-        HeaderComponent
+        HeaderComponent,
+        TranslateModule
     ]
 })
 export class CoreModule {

@@ -1,0 +1,11 @@
+@import "src/styles/variables";
+
+.card-header {
+    @extend %regular-font;
+    color: $text-color;
+}
+
+.card-title {
+    @extend %medium-font;
+    color: $text-color;
+}
