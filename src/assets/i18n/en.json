@@ -21,7 +21,7 @@
         "emptySurnameControlError": "Field Surname can't be empty",
         "digitsSurnameControlError": "Field Name may contain only letters",
         "emptyAgeControlError": "Field Age can't be empty",
-        "lettersAgeControlError": "Field Age may contain only digits",
+        "lettersAgeControlError": "Field Age may contain only digits and can't begin with 0",
         "helloText": "Hello",
         "saveButton": "Save"
     }

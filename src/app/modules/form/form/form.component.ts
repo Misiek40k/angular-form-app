@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { FormService } from '../../../services/form.service';
+import { Data } from '../../../models/data';
 
 @Component({
     selector: 'app-form',
@@ -12,15 +13,15 @@ export class FormComponent implements OnInit {
 
     nameControl = new FormControl('', [
         Validators.required,
-        Validators.pattern(/^[A-Za-z]+$/)
+        Validators.pattern(/^[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ]+$/)
     ]);
     surnameControl = new FormControl('', [
         Validators.required,
-        Validators.pattern(/^[A-Za-z]+$/)
+        Validators.pattern(/^[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ]+$/)
     ]);
     ageControl = new FormControl('', [
         Validators.required,
-        Validators.pattern(/^[0-9]+$/)
+        Validators.pattern(/^[1-9][0-9]+$/)
     ]);
 
     constructor(
@@ -70,5 +71,11 @@ export class FormComponent implements OnInit {
 
     didSaveButtonClick(): void {
         if (!this.isFormCorrect()) { return; }
+
+        const data: Data = {
+            name: this.nameControl.value,
+            surname: this.surnameControl.value,
+            age: this.ageControl.value
+        }
     }
 }
