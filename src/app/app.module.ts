@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './modules/core/core.module';
 
 import { AppComponent } from './app.component';
-import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
     declarations: [
@@ -15,8 +14,7 @@ import { TranslateModule } from '@ngx-translate/core';
         BrowserModule,
         BrowserAnimationsModule,
         AppRoutingModule,
-        CoreModule,
-        TranslateModule
+        CoreModule
     ],
     providers: [],
     bootstrap: [AppComponent]
