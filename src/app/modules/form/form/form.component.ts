@@ -62,9 +62,9 @@ export class FormComponent implements OnInit {
     }
 
     isFormCorrect(): boolean {
-        this.nameControl.markAsTouched();
-        this.surnameControl.markAsTouched();
-        this.ageControl.markAsTouched();
+        this.nameControl.markAsDirty();
+        this.surnameControl.markAsDirty();
+        this.ageControl.markAsDirty();
 
         return !(this.nameControl.errors || this.surnameControl.errors || this.ageControl.errors);
     }
