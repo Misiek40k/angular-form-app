@@ -27,6 +27,7 @@
     },
     "SUMMARY": {
         "title": "'s Page",
+        "accessButton": "Access",
         "ageError": "You must be at least 18 years old!"
     }
 }

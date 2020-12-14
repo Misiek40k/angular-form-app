@@ -27,6 +27,7 @@
     },
     "SUMMARY": {
         "title": " Strona",
+        "accessButton": "Wejdź",
         "ageError": "Musisz mieć ukończone 18 lat!"
     }
 }

@@ -18,9 +18,11 @@ export class FormService {
 
     getFormData(cookieName: string): Observable<Data> {
         return new Observable<Data>(subscriber => {
-            const jsonString: string = this.cookieService.get(cookieName);
-            const dataObject: Data = JSON.parse(jsonString);
-            subscriber.next(dataObject)
+            if (this.cookieService.check(cookieName)) {
+                const jsonString: string = this.cookieService.get(cookieName);
+                const dataObject: Data = JSON.parse(jsonString);
+                subscriber.next(dataObject)
+            }
         });
     }
 
