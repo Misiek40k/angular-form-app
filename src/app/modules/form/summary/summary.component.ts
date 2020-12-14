@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormService } from '../../../services/form.service';
-import { CookieName } from '../../../services/data-holder.service';
+import { Data } from '../../../models/data';
+import { CookieName, FormService } from '../../../services/form.service';
 
 @Component({
     selector: 'app-summary',
@@ -9,15 +9,20 @@ import { CookieName } from '../../../services/data-holder.service';
 })
 export class SummaryComponent implements OnInit {
 
+    formData: Data;
+
     constructor(
         private formService: FormService
     ) { }
 
     ngOnInit(): void {
-        this.formService.getFormData(CookieName.formData)
-            .subscribe(formData => {
-                console.log(formData);
-            });
+        this.updateModel();
     }
 
+    updateModel(): void {
+        this.formService.getFormData(CookieName.formData)
+            .subscribe(formData => {
+                this.formData = formData;
+            });
+    }
 }

@@ -3,6 +3,10 @@ import { CookieService } from 'ngx-cookie-service';
 import { Data } from '../models/data';
 import { Observable } from 'rxjs';
 
+export enum CookieName {
+    formData = 'formData'
+}
+
 @Injectable({
     providedIn: 'root'
 })

@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
-import { FormService } from '../../../services/form.service';
+import { CookieName, FormService } from '../../../services/form.service';
 import { Data } from '../../../models/data';
 import { Router } from '@angular/router';
-import { CookieName } from '../../../services/data-holder.service';
 
 @Component({
     selector: 'app-form',
@@ -12,6 +11,8 @@ import { CookieName } from '../../../services/data-holder.service';
     styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
+
+    formData: Data;
 
     nameControl = new FormControl(null, [
         Validators.required,
@@ -32,7 +33,23 @@ export class FormComponent implements OnInit {
         private router: Router
     ) { }
 
-    ngOnInit(): void { }
+    ngOnInit(): void {
+        this.updateModel();
+    }
+
+    updateModel(): void {
+        this.formService.getFormData(CookieName.formData)
+            .subscribe(formData => {
+                this.formData = formData;
+                this.updateView();
+            });
+    }
+
+    updateView(): void {
+        this.nameControl.setValue(this.formData.name);
+        this.surnameControl.setValue(this.formData.surname);
+        this.ageControl.setValue(this.formData.age);
+    }
 
     isHelloStripeVisible(): boolean {
         return this.nameControl.value && !this.nameControl.errors && this.surnameControl.value && !this.surnameControl.errors;
@@ -83,7 +100,7 @@ export class FormComponent implements OnInit {
 
         this.formService.setFormData(CookieName.formData, data, 0)
             .subscribe(() => {
-                this.router.navigate(['/form/summary'])
+                this.router.navigate(['/form/summary']);
             });
     }
 }
