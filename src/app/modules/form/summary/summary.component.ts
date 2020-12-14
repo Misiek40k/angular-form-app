@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CookieName, FormService } from '../../../services/form.service';
+import { FormService } from '../../../services/form.service';
+import { CookieName } from '../../../services/data-holder.service';
 
 @Component({
     selector: 'app-summary',

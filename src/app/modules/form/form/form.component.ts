@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
-import { CookieName, FormService } from '../../../services/form.service';
+import { FormService } from '../../../services/form.service';
 import { Data } from '../../../models/data';
 import { Router } from '@angular/router';
+import { CookieName } from '../../../services/data-holder.service';
 
 @Component({
     selector: 'app-form',
