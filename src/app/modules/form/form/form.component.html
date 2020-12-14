@@ -26,7 +26,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 form-col h-auto d-flex align-items-center"
-                                 *ngIf="nameControl.touched && nameControl.errors">
+                                 *ngIf="nameControl.dirty && nameControl.errors">
                                 <small class="text-danger">
                                     {{getNameControlErrorMessage()}}
                                 </small>
@@ -48,7 +48,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 form-col h-auto d-flex align-items-center"
-                                 *ngIf="surnameControl.touched && surnameControl.errors">
+                                 *ngIf="surnameControl.dirty && surnameControl.errors">
                                 <small class="text-danger">
                                     {{getSurnameControlErrorMessage()}}
                                 </small>
@@ -69,7 +69,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 form-col h-auto d-flex align-items-center"
-                                 *ngIf="ageControl.touched && ageControl.errors">
+                                 *ngIf="ageControl.dirty && ageControl.errors">
                                 <small class="text-danger">
                                     {{getAgeControlErrorMessage()}}
                                 </small>

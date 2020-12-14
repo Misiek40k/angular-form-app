@@ -13,15 +13,15 @@ export class FormComponent implements OnInit {
 
     nameControl = new FormControl('', [
         Validators.required,
-        Validators.pattern(/^[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ]+$/)
+        Validators.pattern(/^[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ]*$/)
     ]);
     surnameControl = new FormControl('', [
         Validators.required,
-        Validators.pattern(/^[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ]+$/)
+        Validators.pattern(/^[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ]*$/)
     ]);
     ageControl = new FormControl('', [
         Validators.required,
-        Validators.pattern(/^[1-9][0-9]+$/)
+        Validators.pattern(/^[1-9][0-9]*$/)
     ]);
 
     constructor(
