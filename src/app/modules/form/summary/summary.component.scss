@@ -6,8 +6,6 @@
     object-fit: cover;
 }
 
-.badge-danger {
+.danger-badge-text {
     @extend %medium-font;
-    font-size: $base-size * 1.2;
-    background: $danger-color;
 }
