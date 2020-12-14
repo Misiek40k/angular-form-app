@@ -11,8 +11,3 @@
         margin: 0
     }
 }
-
-.hello-text {
-    @extend %medium-font;
-    font-size: $base-size * 0.8;
-}

@@ -24,5 +24,9 @@
         "lettersAgeControlError": "Field Age may contain only digits and can't begin with 0",
         "helloText": "Hello",
         "saveButton": "Save"
+    },
+    "SUMMARY": {
+        "title": "'s Page",
+        "ageError": "You must be at least 18 years old!"
     }
 }

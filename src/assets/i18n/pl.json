@@ -24,5 +24,9 @@
         "lettersAgeControlError": "Pole Wiek może zawierać wyłącznie cyfry i nie może zaczynać się od 0",
         "helloText": "Cześć",
         "saveButton": "Zapisz"
+    },
+    "SUMMARY": {
+        "title": " Strona",
+        "ageError": "Musisz mieć ukończone 18 lat!"
     }
 }

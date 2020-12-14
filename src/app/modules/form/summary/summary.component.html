@@ -1,1 +1,37 @@
-<p>summary works!</p>
+<section class="section">
+    <div class="container">
+        <div class="row title-row" *ngIf="formData">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="hello-text">
+                            {{this.formData.name}} {{this.formData.surname}}{{'SUMMARY.title' | translate}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row buttons-row" *ngIf="isAccessBtnVisible">
+            <div class="col">
+                <button class="btn btn-primary" (click)="didAccessButtonClick()">
+                    {{'FORM.saveButton' | translate}}
+                </button>
+            </div>
+        </div>
+        <div class="row" *ngIf="isImageBoxVisible">
+            <div class="col">
+                <img class="succes-image rounded mx-auto d-block" src="assets/images/corvette.jpg" alt="corvette">
+            </div>
+        </div>
+        <div class="row justify-content-center" *ngIf="isDangerBoxVisible">
+            <div class="col">
+                <h4 class="text-center">
+                    <span class="badge badge-danger">
+                        {{'SUMMARY.ageError' | translate}}
+                    </span>
+                </h4>
+            </div>
+        </div>
+    </div>
+
+</section>

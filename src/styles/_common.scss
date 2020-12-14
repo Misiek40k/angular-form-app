@@ -21,3 +21,8 @@ body {
     background: $primary-color;
     border-color: $primary-color;
 }
+
+.hello-text {
+    @extend %medium-font;
+    font-size: $base-size * 0.8;
+}

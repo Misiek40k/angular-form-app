@@ -11,6 +11,10 @@ export class SummaryComponent implements OnInit {
 
     formData: Data;
 
+    isAccessBtnVisible = true;
+    isDangerBoxVisible = false;
+    isImageBoxVisible = false;
+
     constructor(
         private formService: FormService
     ) { }
@@ -24,5 +28,17 @@ export class SummaryComponent implements OnInit {
             .subscribe(formData => {
                 this.formData = formData;
             });
+    }
+
+    didAccessButtonClick(): void {
+        if (!this.formData) { return; }
+
+        this.isAccessBtnVisible = false;
+
+        if (this.formData.age < 18) {
+            this.isDangerBoxVisible = true;
+        } else {
+            this.isImageBoxVisible = true;
+        }
     }
 }

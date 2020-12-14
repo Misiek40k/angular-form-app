@@ -1,0 +1,13 @@
+@import "src/styles/variables";
+
+.succes-image {
+    width: $base-size * 25;
+    height: $base-size * 25;
+    object-fit: cover;
+}
+
+.badge-danger {
+    @extend %medium-font;
+    font-size: $base-size * 1.2;
+    background: $danger-color;
+}
