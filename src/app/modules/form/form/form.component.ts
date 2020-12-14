@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
-import { FormService } from '../../../services/form.service';
+import { CookieName, FormService } from '../../../services/form.service';
 import { Data } from '../../../models/data';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-form',
@@ -11,22 +12,23 @@ import { Data } from '../../../models/data';
 })
 export class FormComponent implements OnInit {
 
-    nameControl = new FormControl('', [
+    nameControl = new FormControl(null, [
         Validators.required,
         Validators.pattern(/^[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ]*$/)
     ]);
-    surnameControl = new FormControl('', [
+    surnameControl = new FormControl(null, [
         Validators.required,
         Validators.pattern(/^[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ]*$/)
     ]);
-    ageControl = new FormControl('', [
+    ageControl = new FormControl(null, [
         Validators.required,
         Validators.pattern(/^[1-9][0-9]*$/)
     ]);
 
     constructor(
         private translate: TranslateService,
-        private formService: FormService
+        private formService: FormService,
+        private router: Router
     ) { }
 
     ngOnInit(): void { }
@@ -75,7 +77,12 @@ export class FormComponent implements OnInit {
         const data: Data = {
             name: this.nameControl.value,
             surname: this.surnameControl.value,
-            age: this.ageControl.value
-        }
+            age: Number(this.ageControl.value)
+        };
+
+        this.formService.setFormData(CookieName.formData, data, 0)
+            .subscribe(() => {
+                this.router.navigate(['/form/summary'])
+            });
     }
 }

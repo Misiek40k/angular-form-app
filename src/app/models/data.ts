@@ -2,7 +2,7 @@ export class Data {
 
     name: string;
     surname: string;
-    age: string;
+    age: number;
 
     constructor(input) {
         this.name = input.name;

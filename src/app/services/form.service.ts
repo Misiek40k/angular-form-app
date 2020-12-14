@@ -1,6 +1,11 @@
 import { Injectable } from '@angular/core';
-import { StorageMap } from '@ngx-pwa/local-storage';
+import { CookieService } from 'ngx-cookie-service';
 import { Data } from '../models/data';
+import { Observable } from 'rxjs';
+
+export enum CookieName {
+    formData = 'formData'
+}
 
 @Injectable({
     providedIn: 'root'
@@ -8,6 +13,23 @@ import { Data } from '../models/data';
 export class FormService {
 
     constructor(
-        private storage: StorageMap
+        private cookieService: CookieService
     ) { }
+
+    getFormData(cookieName: string): Observable<Data> {
+        return new Observable<Data>(subscriber => {
+            const jsonString: string = this.cookieService.get(cookieName);
+            const dataObject: Data = JSON.parse(jsonString);
+            subscriber.next(dataObject)
+        });
+    }
+
+    setFormData(cookieName: string, data: Data, expirationTime: number): Observable<boolean> {
+        const jsonString = JSON.stringify(data);
+
+        return new Observable<boolean>(subscriber => {
+            this.cookieService.set(cookieName, jsonString, expirationTime);
+            subscriber.next(true);
+        });
+    }
 }
