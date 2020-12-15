@@ -4,7 +4,7 @@ Simple Angular project with Reactive Forms and RXJS observables.
 
 ### Live
 
-Open live on: [GH-Pages](https://github.com/angular/angular-cli).
+Open live on: [GH-Pages](https://misiek40k.github.io/angular-form-app/).
 
 ## Development server
 
