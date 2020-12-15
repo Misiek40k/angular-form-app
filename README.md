@@ -2,6 +2,8 @@
 
 Simple Angular project with Reactive Forms and RXJS observables.
 
+Depending on the browser language, it is displayed in Polish or English.
+
 ### Live
 
 Open live on: [GH-Pages](https://misiek40k.github.io/angular-form-app/).
