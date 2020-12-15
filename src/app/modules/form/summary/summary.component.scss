@@ -1,9 +1,15 @@
 @import "src/styles/variables";
+@import '~bootstrap/scss/bootstrap';
 
 .succes-image {
     width: $base-size * 25;
     height: $base-size * 25;
     object-fit: cover;
+
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .danger-badge-text {
