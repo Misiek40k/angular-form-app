@@ -1,6 +1,10 @@
 # AngularFormApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+Simple Angular project with Reactive Forms and RXJS observables.
+
+### Live
+
+Open live on: [GH-Pages](https://github.com/angular/angular-cli).
 
 ## Development server
 
