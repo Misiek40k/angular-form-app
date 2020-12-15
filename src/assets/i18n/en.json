@@ -28,6 +28,7 @@
     "SUMMARY": {
         "title": "'s Page",
         "accessButton": "Access",
-        "ageError": "You must be at least 18 years old!"
+        "ageError": "You must be at least 18 years old!",
+        "noData": "Complete form to get access to service."
     }
 }

@@ -1,36 +1,57 @@
-<section class="section">
-    <div class="container">
-        <div class="row title-row" *ngIf="formData">
-            <div class="col">
-                <div class="card">
-                    <div class="card-header">
+<ng-container *ngIf="formData; then data else noData"></ng-container>
+
+<ng-template #noData>
+    <section class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-danger text-white text-center">
+                            <span class="danger-badge-text">{{'SUMMARY.noData' | translate}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</ng-template>
+
+<ng-template #data>
+    <section class="section">
+        <div class="container">
+            <div class="row title-row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
                         <span class="hello-text">
                             {{this.formData.name}} {{this.formData.surname}}{{'SUMMARY.title' | translate}}
                         </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row buttons-row" *ngIf="isAccessBtnVisible">
+                <div class="col">
+                    <button class="btn btn-primary" (click)="didAccessButtonClick()">
+                        {{'SUMMARY.accessButton' | translate}}
+                    </button>
+                </div>
+            </div>
+            <div class="row" *ngIf="isImageBoxVisible">
+                <div class="col">
+                    <img class="succes-image rounded mx-auto d-block" src="assets/images/corvette.jpg" alt="corvette">
+                </div>
+            </div>
+            <div class="row justify-content-center" *ngIf="isDangerBoxVisible">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-danger text-white text-center">
+                            <span class="danger-badge-text">{{'SUMMARY.ageError' | translate}}</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row buttons-row" *ngIf="isAccessBtnVisible">
-            <div class="col">
-                <button class="btn btn-primary" (click)="didAccessButtonClick()">
-                    {{'SUMMARY.accessButton' | translate}}
-                </button>
-            </div>
-        </div>
-        <div class="row" *ngIf="isImageBoxVisible">
-            <div class="col">
-                <img class="succes-image rounded mx-auto d-block" src="assets/images/corvette.jpg" alt="corvette">
-            </div>
-        </div>
-        <div class="row justify-content-center" *ngIf="isDangerBoxVisible">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header bg-danger text-white text-center">
-                        <span class="danger-badge-text">{{'SUMMARY.ageError' | translate}}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+</ng-template>
+
