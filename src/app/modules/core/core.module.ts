@@ -8,6 +8,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SharedModule } from '../shared/shared.module';
 
 import { HeaderComponent } from './header/header.component';
+import { CookieService } from 'ngx-cookie-service';
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
@@ -30,6 +31,7 @@ export function HttpLoaderFactory(http: HttpClient) {
             }
         })
     ],
+    providers: [CookieService],
     exports: [
         HeaderComponent
     ]

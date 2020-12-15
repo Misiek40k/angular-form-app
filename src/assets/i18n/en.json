@@ -2,10 +2,33 @@
     "HEADER": {
         "title": "Form App",
         "formBtn": "Form",
-        "sumbmitBtn": "Submit"
+        "summaryBtn": "Summary"
     },
     "HOMEPAGE": {
         "cardHeaderText": "Hello!",
         "cardBodyText": "Welcome to Angular SPA!"
+    },
+    "FORM": {
+        "title": "User Data",
+        "nameControlLabel": "Name:",
+        "nameControlPlaceholder": "Enter name...",
+        "surnameControlLabel": "Surname:",
+        "surnameControlPlaceholder": "Enter surname...",
+        "ageControlLabel": "Age:",
+        "ageControlPlaceholder": "Enter age...",
+        "emptyNameControlError": "Field Name can't be empty",
+        "digitsNameControlError": "Field Name may contain only letters",
+        "emptySurnameControlError": "Field Surname can't be empty",
+        "digitsSurnameControlError": "Field Name may contain only letters",
+        "emptyAgeControlError": "Field Age can't be empty",
+        "lettersAgeControlError": "Field Age may contain only digits and can't begin with 0",
+        "helloText": "Hello",
+        "saveButton": "Save"
+    },
+    "SUMMARY": {
+        "title": "'s Page",
+        "accessButton": "Access",
+        "ageError": "You must be at least 18 years old!",
+        "noData": "Complete form to get access to service."
     }
 }

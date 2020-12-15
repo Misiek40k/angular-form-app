@@ -9,6 +9,9 @@
 }
 
 .navbar {
+    padding-left: 0;
+    padding-right: 0;
+
     .navbar-brand {
         display: flex;
         align-items: center;
@@ -19,6 +22,8 @@
 
         .brand-title {
             @extend %title-font;
+            font-size: $base-size;
+            margin-bottom: 0;
         }
     }
 

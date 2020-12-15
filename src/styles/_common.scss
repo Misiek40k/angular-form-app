@@ -6,3 +6,23 @@ body {
     background: $background-color;
     color: $text-color;
 }
+
+.title-row {
+    margin-bottom: $base-size * 2;
+}
+
+.text-danger {
+    @extend %light-font;
+    color: $danger-color;
+}
+
+.btn.btn-primary {
+    @extend %regular-font;
+    background: $primary-color;
+    border-color: $primary-color;
+}
+
+.hello-text {
+    @extend %medium-font;
+    font-size: $base-size * 0.8;
+}

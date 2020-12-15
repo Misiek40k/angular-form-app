@@ -2,10 +2,33 @@
     "HEADER": {
         "title": "Form App",
         "formBtn": "Formularz",
-        "submitBtn": "Wyślij"
+        "summaryBtn": "Podsumowanie"
     },
     "HOMEPAGE": {
         "cardHeaderText": "Cześć!",
         "cardBodyText": "Witaj w aplikacji Angular SPA!"
+    },
+    "FORM": {
+        "title": "Dane Użytkownika",
+        "nameControlLabel": "Imię:",
+        "nameControlPlaceholder": "Wprowadź imię...",
+        "surnameControlLabel": "Nazwisko:",
+        "surnameControlPlaceholder": "Wprowadź nazwisko...",
+        "ageControlLabel": "Wiek:",
+        "ageControlPlaceholder": "Wprowadź wiek...",
+        "emptyNameControlError": "Pole Imię nie może być puste",
+        "digitsNameControlError": "Pole Imię może zawierać wyłącznie litery",
+        "emptySurnameControlError": "Pole Nazwisko nie może być puste",
+        "digitsSurnameControlError": "Pole Nazwisko może zawierać wyłącznie litery",
+        "emptyAgeControlError": "Pole Wiek nie może być puste",
+        "lettersAgeControlError": "Pole Wiek może zawierać wyłącznie cyfry i nie może zaczynać się od 0",
+        "helloText": "Cześć",
+        "saveButton": "Zapisz"
+    },
+    "SUMMARY": {
+        "title": " Strona",
+        "accessButton": "Wejdź",
+        "ageError": "Musisz mieć ukończone 18 lat!",
+        "noData": "Wypełnij formularz, żeby mieć dostęp do serwisu."
     }
 }
